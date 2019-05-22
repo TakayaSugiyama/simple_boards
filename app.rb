@@ -5,10 +5,10 @@ require "sinatra/activerecord"
 
 set :database, {adapter: "sqlite3", database: "contents.sqlite3"}
 class Content < ActiveRecord::Base
-   validates_presecne_of :name
-   validates_presecne_of :email
-   validates_presecne_of :title
-   validates_presecne_of :content
+   validates_presence_of :name
+   validates_presence_of :email
+   validates_presence_of :title
+   validates_presence_of :content
 end
 
 get '/' do
