@@ -3,7 +3,13 @@ require 'bundler'
 Bundler.require
 require "sinatra/activerecord"
 
-set :database, {adapter: "sqlite3", database: "content.sqlite3"}
+set :database, {adapter: "sqlite3", database: "contents.sqlite3"}
+class Content < ActiveRecord::Base
+   validates_presecne_of :name
+   validates_presecne_of :email
+   validates_presecne_of :title
+   validates_presecne_of :content
+end
 
 get '/' do
     erb :home
