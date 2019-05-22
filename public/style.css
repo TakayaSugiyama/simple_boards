@@ -1,0 +1,21 @@
+body {
+    font-size: 16px;
+    font-family: Verdana, sans-serif;
+  }
+  
+.con {
+    width: 500px;
+    margin: 20px auto;
+  }
+  
+h1 {
+      color:blue;
+  }
+
+textarea{
+  width: 500px;
+}
+
+form {
+  height: 500px;
+}
