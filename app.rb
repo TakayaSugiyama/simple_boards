@@ -29,7 +29,8 @@ post '/create_post' do
    email = params[:email]
    title = params[:title]
    content = params[:content]
-   @post = Content.new(name: name,email: email,title: title,content: content)
+   time = Time.now()
+   @post = Content.new(name: name,email: email,title: title,content: content,time: time)
    if @post.save
       redirect :index
    else 

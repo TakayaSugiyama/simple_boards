@@ -9,8 +9,10 @@
    <h1>投稿一覧です</h1>
      　<% @posts.each do |post| %>
          <div class = "posts">
-            <h2><%= post.title %></h2>
-            <p>author: <%= post.name %> email: <%= post.email %> </p>
+            <h2>title: <%= post.title %></h2>
+            <p>author: <%= post.name %> , email: <%= post.email %> </p>
+            <p>time: <%= post.time  %></p>
+            <hr>
          </div>
        <% end %>
       <h3>options</h3>
