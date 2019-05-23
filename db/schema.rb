@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_22_161752) do
+ActiveRecord::Schema.define(version: 2019_05_23_135749) do
 
   create_table "contents", force: :cascade do |t|
     t.string "name"
     t.string "email"
     t.text "title"
     t.text "content"
+    t.string "time"
   end
 
 end
