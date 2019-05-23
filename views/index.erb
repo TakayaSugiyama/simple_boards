@@ -1,0 +1,33 @@
+<html>
+<head>
+     <title>投稿一覧</title>
+    <link rel = "stylesheet" href ="/style.css">
+     <meta charset="utf-8">
+</head>
+<body>
+  <div class = "con">
+   <h1>投稿一覧です</h1>
+     　<% @posts.each do |post| %>
+        <table border = "1">
+           <thead>
+              <tr>
+                <th>name</th>
+                <th>email</th>
+                <th>title</th>
+              </tr>
+           </thead>
+           <tbody>
+              <tr>
+                <td><%= post.name %></td>
+                <td><%= post.email %></td>
+                <td><%= post.title %></td>
+              </tr>
+           </tbody>
+        </table>
+       <% end %>
+　　  <a href = "/form_new">新しく投稿する</a>
+      <a href = "/">ホームに戻る</a>
+   </div>
+  </div>
+</body>
+<html>

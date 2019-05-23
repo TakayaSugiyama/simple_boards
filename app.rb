@@ -19,6 +19,20 @@ get '/form_new' do
    erb :form_new
 end
 
+get '/index' do
+   @posts = Content.all
+   erb :index
+end
+
 post '/create_post' do
-   redirect '/'
+   name = params[:name]
+   email = params[:email]
+   title = params[:title]
+   content = params[:content]
+   @post = Content.new(name: name,email: email,title: title,content: content)
+   if @post.save
+      redirect :index
+   else 
+      redirect :form_new
+   end
 end

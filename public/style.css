@@ -11,16 +11,3 @@ body {
 h1 {
       color:blue;
   }
-
-textarea{
-  width: 500px;
-}
-
-form {
-  height: 500px;
-  margin-bottom: 30px;
-}
-
-form #subimit-btn {
-   margin-top:100px;
-}
