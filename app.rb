@@ -30,8 +30,9 @@ post '/create_post' do
    email = params[:email]
    title = params[:title]
    content = params[:content]
+   password = params[:password]
    time = Time.now()
-   @post = Content.new(name: name,email: email,title: title,content: content,time: time)
+   @post = Content.new(name: name,email: email,title: title,content: content,time: time,passowrd: passowrd)
    if @post.save
       redirect :index
    else 
@@ -46,4 +47,10 @@ get '/show/:id' do
    contents_length = @post.content.chars
    @contents = contents_length.each_slice(65).to_a
    erb :show
+end
+
+
+post '/destory/:post_id' do 
+   post_id = params[:post_id]
+   @post = find_by(id: post_id)
 end
