@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_23_135749) do
+ActiveRecord::Schema.define(version: 2019_05_23_211208) do
 
   create_table "contents", force: :cascade do |t|
     t.string "name"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2019_05_23_135749) do
     t.text "title"
     t.text "content"
     t.string "time"
+    t.string "password"
   end
 
 end
