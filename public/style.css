@@ -18,9 +18,9 @@ textarea{
 
 form {
   height: 500px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
-.content {
-  margin: 0 30px;
+form #subimit-btn {
+   margin-top:100px;
 }
