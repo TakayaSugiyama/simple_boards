@@ -37,3 +37,12 @@ post '/create_post' do
       redirect :form_new
    end
 end
+
+get '/show/:id' do
+   id = params[:id]
+   @post = Content.find_by(id: id)
+   #文字列を整形
+   contents_length = @post.content.chars
+   @contents = contents_length.each_slice(65).to_a
+   erb :show
+end

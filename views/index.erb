@@ -11,7 +11,7 @@
          <div class = "posts">
             <h2>title: <%= post.title %></h2>
             <p>author: <%= post.name %> , email: <%= post.email %> </p>
-            <p>time: <%= post.time  %></p>
+            <p>time: <%= post.time  %> <a href = "/show/<%= post.id %>">show more</a></p>
             <hr>
          </div>
        <% end %>
