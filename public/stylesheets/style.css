@@ -1,5 +1,4 @@
 body {
-    font-size: 16px;
     font-family: Verdana, sans-serif;
   }
   
@@ -10,5 +9,6 @@ body {
   
 h1 {
       color:blue;
+      font-weight:bold;
   }
   
