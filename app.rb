@@ -16,11 +16,12 @@ get '/' do
 end
 
 get '/form_new' do
+   @post = Content.new
    erb :form_new
 end
 
 get '/index' do
-   @posts = Content.all
+   @posts = Content.all.reverse #新しい順番で
    erb :index
 end
 
@@ -34,7 +35,7 @@ post '/create_post' do
    if @post.save
       redirect :index
    else 
-      redirect :form_new
+      erb :form_new
    end
 end
 

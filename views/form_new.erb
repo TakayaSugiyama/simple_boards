@@ -8,22 +8,31 @@
 <body>
   <div class = "con">
    <h1>投稿する</h1>
+   <div class = "errormessages">
+    <% if @post.errors.full_messages.present? %>
+     <ul>
+       <% @post.errors.full_messages.each do |message| %>
+       <li><%= message %></li>
+       <% end %>
+     </ul>
+   </div>
+  <% end %>
   <form action = "create_post" method = "post">
        <div class = "content">
             <p>name</p>
-            <input name = "name" id ="name">
+            <input name = "name" id ="name" required>
        </div>
        <div class = "content">
             <p>email</p>
-            <input name = "email" id = "email">
+            <input name = "email" id = "email" required>
        </div>
        <div class = "content">
            <p>title</p>
-          <input name = "title" id = "title">
+          <input name = "title" id = "title" required>
        </div>
        <div class = "content">
           <p>content</p>
-          <textarea id = "content" style ="padding:10px; font-size:13px"  rows = "20" cols = "50" name = "content">
+          <textarea id = "content" style ="padding:10px; font-size:13px"  rows = "20" cols = "50" name = "content" required>
           </textarea>
        </div>
        <div id = "submit-btn" style = "padding:30px;">
