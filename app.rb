@@ -32,7 +32,7 @@ post '/create_post' do
    content = params[:content]
    password = params[:password]
    time = Time.now()
-   @post = Content.new(name: name,email: email,title: title,content: content,time: time,passowrd: passowrd)
+   @post = Content.new(name: name,email: email,title: title,content: content,time: time,password: password)
    if @post.save
       redirect :index
    else 
@@ -50,7 +50,9 @@ get '/show/:id' do
 end
 
 
-post '/destory/:post_id' do 
-   post_id = params[:post_id]
-   @post = find_by(id: post_id)
+post '/destroy/:id' do 
+   id = params[:id]
+   @post = Content.find_by(id: id)
+   @post.destroy
+   redirect '/index'
 end

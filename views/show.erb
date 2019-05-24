@@ -12,7 +12,9 @@
         <p><%= content.join %></p>
       <% end %>
     </div>
-    <p><a  href = "/destroy/<%=@post.id%>" style = "font-size: 6px" >delete</a></p>
+    <form action = "/destroy/<%=@post.id %>" method = "post">
+        <input type = "submit" value = "delete">
+    </form>
     <hr>
       <h3>options</h3>
       <ul>
